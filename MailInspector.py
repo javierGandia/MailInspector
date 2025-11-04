@@ -28,7 +28,6 @@ import threading
 
 lock = threading.Lock()
 
-eml_path = input("Introduce el nombre del correo con su extensión (por ejemplo: mensaje.eml): ").strip()  #Ruta del EML
 MailInspector="MailInspector.txt"
 
 #----------------------API KEYS-------------------------------------
@@ -915,7 +914,6 @@ def extraer_urls_de_eml(eml_path):
         print(f"Error al procesar el archivo: {e}")
         return []
     
-urls_extraidas = extraer_urls_de_eml(eml_path)
 #Analizar URLS --- API URLScan
 
 
@@ -1072,7 +1070,10 @@ def clean_analysis_files():
 #TEXTO
 
 convert_msg_to_eml("correo.msg", "correo.eml")
-    
+eml_path = input("Introduce el nombre del correo con su extensión (por ejemplo: mensaje.eml): ").strip()  #Ruta del EML
+#Analizar URLS --- API URLScan
+urls_extraidas = extraer_urls_de_eml(eml_path)
+
 clean_analysis_files()
 print("Buenos días \n Se adjunta en el informe de las cabeceras (DKIM, SPF, DMARC) si pasan o no el filtro de correo:\n")
 #-------CABECERSAS-----------
@@ -1512,3 +1513,4 @@ def analisis_detodo():
             print(f"Muchas gracias, y un saludo.")
 
 analisis_detodo()
+
