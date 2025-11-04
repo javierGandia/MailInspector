@@ -49,7 +49,7 @@ Para que funcione correctamente los análisis reputacionales es necesario añadi
 ## Ejemplos de cómo usar el proyecto (código o imágenes)
 La sintaxis para ejecutar correctamente el script es de la siguiente forma: python MailInspector.py
 
-Una vez ha sido ejecutado preguntará si quieres convertir un correo .msg. Para elegir que **NO** puedes darle a cualquier tecla menos a la "y". En el caso que sí quieras convertir el correo con extensión .msg a .eml se deberá llamar 'correo.msg'. Se puede añadir el nombre que quieras modificando la primera variable de la función **convert_msg_to_eml("correo.msg", "correo.eml")**. Asímismo, al haber realizado el conversión se tendrá que ejecutar una segunda vez para el análisis del correo.eml.
+Una vez ha sido ejecutado preguntará si quieres convertir un correo .msg. Para elegir que **NO** puedes darle a cualquier tecla menos a la "y". En el caso que sí quieras convertir el correo con extensión .msg a .eml debes incluir el nombre del archivo al programa. Se puede añadir el nombre que quieras modificando la primera variable de la función **convert_msg_to_eml("correo.msg", "correo.eml")**. Asímismo, al haber realizado el conversión se tendrá que ejecutar una segunda vez para el análisis del correo.eml.
 
 Al terminar la ejecución del script, se habrá creado los siguientes archivos .txt
 
@@ -67,6 +67,7 @@ Para contribuir al proyecto puedes mandar un correo electrónico indicando suger
 ## Contacto
 Correo electrónico: 
 Linkedin: 
+
 
 
 
