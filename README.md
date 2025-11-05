@@ -59,6 +59,8 @@ Al terminar la ejecución del script, se habrá creado los siguientes archivos .
 - URLsScanningResults: Muestra toda la información de las URLs que son escaneadas por URLScan.
 - urlMaliciousDetected: Muestra las URLs que URLscan muestra como maliciosas.
 
+**NOTA IMPORTANTE**: MailInspector está diseñado para analizar correos individuales, no hileras de correos.
+
 
 ## Contribución
 Para contribuir al proyecto puedes mandar un correo electrónico indicando sugerencias de mejora o reporte de errores al correo 
@@ -67,6 +69,7 @@ Para contribuir al proyecto puedes mandar un correo electrónico indicando suger
 ## Contacto
 Correo electrónico: 
 Linkedin: 
+
 
 
 
