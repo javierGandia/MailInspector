@@ -41,9 +41,9 @@ Verificar la versión de Python: python --version
 #### 4. Instalación de dependencias
  `pip install -r requirements.txt`
 #### 5. Añadir las API KEYS de VT y URLSCAN
-Para que funcione correctamente los análisis reputacionales es necesario añadir las API KEYs de Virus Total y URLscan en las siguientes variables:
- - VT_API_KEY
- - URLSCAN_API
+Para que funcione correctamente los análisis reputacionales es necesario añadir las API KEYs de VirusTotal y URLscan en las siguientes variables:
+ - VT_API_KEY1, VT_API_KEY2, VT_API_KEY3 
+ - URLscan_API_KEY1, URLscan_API_KEY2, URLscan_API_KEY3  
 
 
 ## Ejemplos de cómo usar el proyecto
@@ -63,12 +63,14 @@ Al terminar la ejecución del script, se habrá creado los siguientes archivos .
 
 
 ## Contribución
-Para contribuir al proyecto puedes mandar un correo electrónico indicando sugerencias de mejora o reporte de errores al correo 
+Para contribuir al proyecto puedes mandar un correo electrónico indicando sugerencias de mejora o reporte de errores al correo:
 
 
 ## Contacto
 Correo electrónico: 
+
 Linkedin: 
+
 
 
 
