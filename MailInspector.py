@@ -28,6 +28,8 @@ import threading
 
 lock = threading.Lock()
 
+eml_path = ""
+
 MailInspector="MailInspector.txt"
 
 #----------------------API KEYS-------------------------------------
@@ -914,6 +916,7 @@ def extraer_urls_de_eml(eml_path):
         print(f"Error al procesar el archivo: {e}")
         return []
     
+
 #Analizar URLS --- API URLScan
 
 
@@ -1071,7 +1074,6 @@ def clean_analysis_files():
 
 convert_msg_to_eml("correo.msg", "correo.eml")
 eml_path = input("Introduce el nombre del correo con su extensión (por ejemplo: mensaje.eml): ").strip()  #Ruta del EML
-#Analizar URLS --- API URLScan
 urls_extraidas = extraer_urls_de_eml(eml_path)
 
 clean_analysis_files()
@@ -1157,7 +1159,7 @@ def AnalisisCabeceras():
 
 def separarDetecciones(sLinea):
     global CONTADOR_IOCS
-    match_detecciones = re.search(r"Detecciones:\s(\d+)\s/\s94", sLinea)
+    match_detecciones = re.search(r"Detecciones:\s*(\d+)\s*/\s*\d+", sLinea)
     if match_detecciones:
         detecciones = int(match_detecciones.group(1))
         if detecciones == 0 or detecciones == 1:
@@ -1199,7 +1201,7 @@ def verificar_spoofing():
                         COUNT = 0
                     
                 # Verificar si se detecta "Posible Spoofing detectado!"
-                if "[ALERTA] ❌ ¡Posible Spoofing detectado!" in line:
+                if "¡Posible Spoofing detectado!" in line:
                     COUNT = 2
                     # Imprimir la línea siguiente con la información del remitente
                     sLineaRemitentes = lines[i + 1].strip()  # Línea siguiente al mensaje de alerta
@@ -1513,4 +1515,3 @@ def analisis_detodo():
             print(f"Muchas gracias, y un saludo.")
 
 analisis_detodo()
-
