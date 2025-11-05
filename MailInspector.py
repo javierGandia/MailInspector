@@ -1,5 +1,3 @@
-#BUSCA por "MAILINSPECTOR" para saber qué cosas se guardarán en MAILINSPECTOR.txt
-#ARREGLAR (100% Mirarlo)
 import re
 import json
 import urllib.request
@@ -29,7 +27,7 @@ import threading
 lock = threading.Lock()
 
 eml_path = ""
-
+#BUSCA por "MAILINSPECTOR" para saber qué cosas se guardarán en MAILINSPECTOR.txt
 MailInspector="MailInspector.txt"
 
 #----------------------API KEYS-------------------------------------
@@ -1515,3 +1513,4 @@ def analisis_detodo():
             print(f"Muchas gracias, y un saludo.")
 
 analisis_detodo()
+
